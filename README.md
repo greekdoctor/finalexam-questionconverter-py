@@ -9,6 +9,8 @@ This will output a .txt file which can be imported into Anki. Upon importing, ch
 
 To separate questions by subcategory and category, you can separate the source material (from questioncollector) into separate documents by subcategory and category.
 
+The file "unformatted output.txt" is temporary and can be deleted. It was used for debugging purposes.
+
 ## Known bugs
 The script parses the questions based on rigid rules, more specifically that blank newlines either separate one question from the next or the answer and explanation from the question stem. If the document to parse contains blank newlines other than this, all preceding questions will be fucked up in the output. As it stands, finalexam-questioncollector-js does input random blank newlines now and then, and so manual correction of these is necessary for questionconverter to function properly. Reading through the whole output of questioncollector is unfeasible, but you'll know that this has happened when Anki outputs warnings or errors when importing the output of questionconverter.
 A much better solution would've been to use some clever regex, but I'm not that clever.
